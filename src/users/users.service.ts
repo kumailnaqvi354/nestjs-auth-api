@@ -31,7 +31,7 @@ export class UsersService {
     updateUserDto: UpdateUserDto,
   ): Promise<UserDocument> {
     return this.userModel
-      .findByIdAndUpdate(id, updateUserDto, { new: true })
+      .findByIdAndUpdate(id, updateUserDto, { new: true })  
       .exec();
   }
 
