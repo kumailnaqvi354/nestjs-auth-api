@@ -4,9 +4,10 @@ import { AppService } from './app.service';
 import { MongooseModule } from '@nestjs/mongoose';
 import { UsersModule } from './users/users.module';
 import { AuthModule } from './auth/auth.module';
+import { ConfigService } from '@nestjs/config';
 
 @Module({
-  imports: [MongooseModule.forRoot(process.env.MONGODB_URL), UsersModule, AuthModule],
+  imports: [MongooseModule.forRoot("mongodb+srv://kumailali:Rendering14@cluster0.u7acins.mongodb.net/?retryWrites=true&w=majority"), UsersModule, AuthModule],
   controllers: [AppController],
   providers: [AppService],
 })
